@@ -1,0 +1,32 @@
+h2{
+  text-align: center;
+  color:#333;
+  font-size: 20px;
+}
+
+.book{
+  margin: 20px 10px;
+  float: left;
+  width: 400px;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+
+.price{
+  position: absolute;
+  right: 30px;
+  font-weight: bold;
+}
+
+.basket{
+  color:#333;
+  right: 30px;
+  top:30px;
+  font-size: 20px;
+  position: absolute;
+}
+
+.selected{
+  border:green 3px solid;
+}

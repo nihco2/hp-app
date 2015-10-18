@@ -1,0 +1,5 @@
+<div class="book" {{action 'select' book}}>
+  <h2>{{book.title}}</h2>
+  <img class="{{if book.selected 'selected'}}" src="{{book.cover}}" alt="{{book.title}}" width="350" height="500"/>
+  <p class="price">{{book.price}}€</p>
+</div>
