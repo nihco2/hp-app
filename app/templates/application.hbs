@@ -1,10 +1,12 @@
-<h1 id="title">La bibliothèque d’Henri Potier</h1>
-{{#link-to 'basket' class="basket"}}
-Panier: {{model.count}}
-{{#if model.plural}}
-articles
-{{^}}
-article
-{{/if}}
-{{/link-to}}
+<header>
+  <h1 id="title">La bibliothèque d’Henri Potier</h1>
+  {{#link-to 'basket' class="basket"}}
+  Panier: {{model.count}}
+  {{#if model.plural}}
+  articles
+  {{^}}
+  article
+  {{/if}}
+  {{/link-to}}
+</header>
 {{outlet}}

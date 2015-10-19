@@ -7,7 +7,8 @@ var Book = DS.Model.extend({
   price: DS.attr('number'),
   cover: DS.attr('string'),
   selected: DS.attr('boolean'),
-  basket: DS.belongsTo('basket')
+  basket: DS.belongsTo('basket'),
+  quantity:DS.attr('number')
 });
 
 export default Book;

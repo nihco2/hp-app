@@ -1,18 +1,15 @@
-import Ember from "ember";
 import DS from "ember-data";
 
 export default DS.RESTSerializer.extend({
   normalizePayload: function (payload) {
-    var books = Ember.A();
+    console.log(payload)
 
-    payload.forEach(function(book){
-      book.id = book.isbn;
-      book.quantity = 0;
-      books.push(book);
+    payload.offers.forEach(function(offer,index){
+      offer.id = index;
     });
 
     var normalizedPayload = {
-      books : books
+      commercialOffers : payload.offers
     };
 
     return this._super(normalizedPayload);
