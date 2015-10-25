@@ -2,10 +2,21 @@ import Ember from "ember";
 
 var BasketRoute = Ember.Route.extend({
   model: function() {
-    if(!this.modelFor('application').get('books').length){
-      return false;
+    if(!this.controllerFor('application').get('basket').get('length')){
+      return this.transitionTo('books');
     }
-    return this.store.findAll('commercial-offer');
+
+  var isbns = Ember.A();
+
+    this.controllerFor('application').get('basket').forEach(function(book){
+      isbns.push(book.get('isbn'));
+    });
+
+    return this.store.find('commercial-offer',{
+      isbns : isbns.join()
+    }).then(function(offer){
+      return offer;
+    });
   }
 });
 

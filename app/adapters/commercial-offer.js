@@ -1,13 +1,12 @@
 import DS from "ember-data";
 
 export default DS.RESTAdapter.extend(DS.BuildURLMixin,{
-  host: 'http://henri-potier.xebia.fr/',
+  host: 'http://henri-potier.xebia.fr',
+  ajax: function(url,type,hash){
+    url = url.replace(':isbns', hash.data.isbns);
+    return this._super(url, type);
+  },
   namespace: Ember.computed('namespace',function(params){
-    var basket = this.store.all('basket').get('firstObject'),
-      isbns = Ember.A();
-    basket.get('books').forEach(function(book){
-      isbns.push(book.id);
-    });
-    return 'books/'+ isbns.join();
+    return 'books/:isbns';
   })
 });

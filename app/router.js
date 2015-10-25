@@ -9,7 +9,7 @@ Router.map(function() {
   this.resource('books', { path: '/books' }, function() {
     this.route('book');
   });
-  this.route('basket');
+  this.resource('basket');
 });
 
 export default Router;

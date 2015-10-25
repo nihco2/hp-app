@@ -1,5 +1,5 @@
 <section class="container">
-  {{#each book in model}}
+  {{#each model as |book|}}
     {{book-component book=book}}
   {{/each}}
 </section>

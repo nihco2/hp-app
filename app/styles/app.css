@@ -14,10 +14,18 @@ h2{
   font-size: 20px;
 }
 
+h3{
+  margin-top: 100px;
+}
+
+.container{
+  margin-top: 60px;
+}
+
 .book{
   margin: 20px 10px;
   float: left;
-  width: 400px;
+  width: 260px;
   position: relative;
   text-align: center;
 }
@@ -45,6 +53,28 @@ button{
   position: absolute;
 }
 
+.basket-cell{
+  text-align: center;
+  vertical-align: top;
+  padding: 0 15px;
+}
+
 .selected{
   border:green 3px solid;
+}
+
+.dispt{
+  display: table;
+}
+
+.disptc{
+  display: table-cell;
+}
+
+.disptr{
+  display: table-row;
+}
+
+.tac{
+  text-align: center;
 }
