@@ -34,6 +34,10 @@ h3{
   margin-top: 100px;
 }
 
+#title{
+  cursor: pointer;
+  color: #333;
+}
 .container{
   margin-top: 60px;
 }
