@@ -6,8 +6,6 @@ var Book = DS.Model.extend(Ember.Copyable,{
   title: DS.attr('string'),
   cover: DS.attr('string'),
   price: DS.attr('number'),
-  cover: DS.attr('string'),
-  selected: DS.attr('boolean'),
   quantity: DS.attr('number'),
   totalPrice : function(){
     return this.get('quantity') * this.get('price');
