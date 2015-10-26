@@ -53,7 +53,7 @@ var BasketController = Ember.Controller.extend({
         self.get('offers').push(self.minusOffer(offer.get('value')));
         break;
       case 'slice':
-        //console.log('slice::', self.sliceOffer(offer.get('value')));
+        //console.log('slice::', self.sliceOffer(offer.get('value'),offer.get('sliceValue')));
         self.get('offers').push(self.sliceOffer(offer.get('value'), offer.get('sliceValue')));
         break;
       default:
