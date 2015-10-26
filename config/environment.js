@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'app-test',
+    modulePrefix: 'hp-app',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
@@ -16,6 +16,15 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
+      'font-src': "'self' data: use.typekit.net",
+      'connect-src': "'self' henri-potier.xebia.fr",
+      'img-src': "'self' http://henri-potier.xebia.fr",
+      'style-src': "'self' 'unsafe-inline'"
     }
   };
 
