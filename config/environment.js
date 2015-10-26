@@ -21,7 +21,7 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
       'default-src': "'none'",
       'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
-      'font-src': "'self' data: use.typekit.net",
+      'font-src': "'self' data: use.typekit.net https://fonts.gstatic.com",
       'connect-src': "'self' henri-potier.xebia.fr",
       'img-src': "'self' http://henri-potier.xebia.fr",
       'style-src': "'self' 'unsafe-inline'"

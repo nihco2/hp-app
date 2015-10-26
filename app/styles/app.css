@@ -1,23 +1,43 @@
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC);
+html{
+  font-family: 'Amatic SC', cursive;
+  background-color: #7b8485;
+}
 header{
-  position: fixed;
   position: fixed;
     width: 100%;
     height: 80px;
     z-index: 1;
-    background: gray;
+    background: #848484; /* Old browsers */
+    background: -moz-linear-gradient(top,  #848484 1%, #8190e6 49%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#848484), color-stop(49%,#8190e6)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #848484 1%,#8190e6 49%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #848484 1%,#8190e6 49%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #848484 1%,#8190e6 49%); /* IE10+ */
+    background: linear-gradient(to bottom,  #848484 1%,#8190e6 49%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#848484', endColorstr='#8190e6',GradientType=0 ); /* IE6-9 */
     top: 0;
     left: 0;
+}
+
+h1{
+  margin-left: 50px;
 }
 h2{
   text-align: center;
   color:#333;
   font-size: 20px;
+  font-family: 'Amatic SC', cursive;
 }
 
 h3{
   margin-top: 100px;
 }
 
+#title{
+  cursor: pointer;
+  color: #333;
+}
 .container{
   margin-top: 60px;
 }
@@ -28,6 +48,7 @@ h3{
   width: 260px;
   position: relative;
   text-align: center;
+  font-family: sans-serif;
 }
 
 .buttons{
@@ -46,11 +67,15 @@ button{
 }
 
 .basket{
-  color:#333;
+  color: #333;
   right: 30px;
-  top:30px;
-  font-size: 20px;
+  top: 18px;
+  font-size: 30px;
   position: absolute;
+}
+
+.basket-offer{
+  font-family: sans-serif;
 }
 
 .basket-cell{

@@ -3,10 +3,11 @@ import Ember from "ember";
 var BasketRoute = Ember.Route.extend({
   model: function() {
     if(!this.controllerFor('application').get('basket').get('length')){
+      alert('aucun articles ajoutés');
       return this.transitionTo('books');
     }
 
-  var isbns = Ember.A();
+    var isbns = Ember.A();
 
     this.controllerFor('application').get('basket').forEach(function(book){
       isbns.push(book.get('isbn'));
