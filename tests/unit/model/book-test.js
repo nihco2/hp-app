@@ -6,18 +6,25 @@ var BOOK_DATA = {
   isbn: '12345',
   title: 'Henri Potier et la coupe de cheveux',
   cover: 'http://cover.jpg',
-  price: 42
+  price: 42,
+  quantity: 5
 };
 
-test('a book should have an isbn', function (assert) {
+test('a book should have his own properties', function (assert) {
   var book = this.subject(BOOK_DATA);
   var isbn = book.get('isbn');
   var title = book.get('title');
   var cover = book.get('cover');
   var price = book.get('price');
 
-  assert.equal(book, BOOK_DATA.isbn);
+  assert.equal(isbn, BOOK_DATA.isbn);
   assert.equal(title, BOOK_DATA.title);
   assert.equal(cover, BOOK_DATA.cover);
   assert.equal(price, BOOK_DATA.price);
+});
+
+test('a book should have a computed property totalPrice', function (assert) {
+  var book = this.subject(BOOK_DATA);
+  var price = book.get('price');
+  assert.equal(book.get('totalPrice'), BOOK_DATA.quantity * BOOK_DATA.price);
 });
