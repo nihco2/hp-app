@@ -1,39 +1,41 @@
-<h3>Votre Panier:</h3>
-<div class="dispt tac">
-  <div class="disptr">
-    <div class="disptc">
-
-    </div>
-    <div class="disptc">
-      Livre
-    </div>
-    <div class="disptc">
-      Quantité
-    </div>
-    <div class="disptc">
-      Prix
-    </div>
-    <div class="disptc basket-cell">
-      Réduction:<br>{{reduction}}€
-    </div>
-    <div class="disptc basket-cell">
-      <strong>TOTAL:</strong><br>{{basketFinalPrice}}€
-    </div>
-  </div>
-  {{#each basketToDisplay as |book|}}
+<div class="basket-offer">
+  <h3>Votre Panier:</h3>
+  <div class="dispt tac">
     <div class="disptr">
       <div class="disptc">
-        <img src="{{book.cover}}" alt="{{book.title}}" width="50" height="71"/>
+
+      </div>
+      <div class="disptc">
+        Livre
+      </div>
+      <div class="disptc">
+        Quantité
+      </div>
+      <div class="disptc">
+        Prix
       </div>
       <div class="disptc basket-cell">
-        <h5>{{book.title}}</h5>
+        Réduction:<br>{{reduction}}€
       </div>
       <div class="disptc basket-cell">
-        <p>{{book.quantity}}</p>
-      </div>
-      <div class="disptc basket-cell">
-        <p>{{book.totalPrice}}€</p>
+        <strong>TOTAL:</strong><br>{{basketFinalPrice}}€
       </div>
     </div>
-  {{/each}}
+    {{#each basketToDisplay as |book|}}
+      <div class="disptr">
+        <div class="disptc">
+          <img src="{{book.cover}}" alt="{{book.title}}" width="50" height="71"/>
+        </div>
+        <div class="disptc basket-cell">
+          <h5>{{book.title}}</h5>
+        </div>
+        <div class="disptc basket-cell">
+          <p>{{book.quantity}}</p>
+        </div>
+        <div class="disptc basket-cell">
+          <p>{{book.totalPrice}}€</p>
+        </div>
+      </div>
+    {{/each}}
+  </div>
 </div>
