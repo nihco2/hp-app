@@ -9,7 +9,8 @@ var Book = DS.Model.extend(Ember.Copyable,{
   quantity: DS.attr('number'),
   totalPrice : function(){
     return this.get('quantity') * this.get('price');
-  }.property('quantity','price')
+  }.property('quantity','price'),
+  basket: DS.belongsTo('basket')
 });
 
 export default Book;
