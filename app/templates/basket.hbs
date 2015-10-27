@@ -15,10 +15,10 @@
         Prix
       </div>
       <div class="disptc basket-cell">
-        Réduction:<br>{{reduction}}€
+        Réduction:<br><strong>{{reduction}}€</strong>
       </div>
       <div class="disptc basket-cell">
-        <strong>TOTAL:</strong><br>{{basketFinalPrice}}€
+        <strong>TOTAL:</strong><br><strong>{{basketFinalPrice}}€</strong>
       </div>
     </div>
     {{#each basketToDisplay as |book|}}
@@ -33,7 +33,7 @@
           <p>{{book.quantity}}</p>
         </div>
         <div class="disptc basket-cell">
-          <p>{{book.totalPrice}}€</p>
+          <p><strong>{{book.totalPrice}}€</strong></p>
         </div>
       </div>
     {{/each}}

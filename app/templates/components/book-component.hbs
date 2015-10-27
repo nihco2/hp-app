@@ -2,8 +2,8 @@
   <h2>{{book.title}}</h2>
   <img class="{{if book.selected 'selected'}}" src="{{book.cover}}" alt="{{book.title}}" width="200" height="286"/>
   <div class="buttons">
-    <button {{action 'remove' book}}>-</button>
-    <button {{action 'add' book}}>+</button>
+    <button {{action 'remove' book}}><span class="button glyphicon glyphicon-minus" aria-hidden="true"></span></button>
+    <button {{action 'add' book}}><span class="button glyphicon glyphicon-plus" aria-hidden="true"></span></button>
     <span>({{book.quantity}})</span>
   </div>
   <p class="price">{{book.price}}€</p>

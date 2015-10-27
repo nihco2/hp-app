@@ -1,4 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Amatic+SC);
+
+body{
+  background-color: #7b8485;
+}
 #hp-app{
   font-family: 'Amatic SC', cursive;
   background-color: #7b8485;
@@ -28,7 +32,7 @@ h2{
   color:black;
   font-size: 20px;
   font-family: 'Amatic SC', cursive;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 h3{
@@ -54,17 +58,20 @@ h3{
 
 .buttons{
   display: inline-block;
+  margin-top: 10px;
 }
 
 button{
   cursor: pointer;
+  background: none;
+  border: none;
 }
 
 .price{
   position: absolute;
   right: 30px;
   font-weight: bold;
-  bottom: -15px;
+  bottom: -10px;
 }
 
 .basket{
@@ -77,6 +84,7 @@ button{
 
 .basket-offer{
   font-family: sans-serif;
+  padding: 20px;
 }
 
 .basket-cell{
